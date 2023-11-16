@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbs5-5b5ylfojEErmfZzZTEiAZIw" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-xxJLwoQiFqFq1bsrtSof7i6bAiZTRCoy1FxnqoXdRZnFJwtfP2F85lKb5Ae4daT6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

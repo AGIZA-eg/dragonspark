@@ -1,0 +1,6 @@
+<!-- gpaapp/templates/gpaapp/calculate_gpa.html -->
+<form method="post" action="{% url 'calculate_gpa' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Calculate GPA</button>
+</form>

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Dragon Schedule{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h2 class="mb-4">Dragon Schedule</h2>
+        {% if dragons %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Dragon Name</th>
+                        <th scope="col">Species</th>
+                        <th scope="col">Last Meal Time</th>
+                        <th scope="col">Is Safe to Feed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for dragon in dragons %}
+                    <tr>
+                        <td>{{ dragon.dragon_name }}</td>
+                        <td>{{ dragon.species }}</td>
+                        <td>{{ dragon.last_meal_time }}</td>
+                        <td>{{ dragon.is_safe_to_feed }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No dragons available in the schedule.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
